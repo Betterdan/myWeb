@@ -31,17 +31,22 @@ if ( post_password_required() ) {
 
 				if ( '1' === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'blogi' ), get_the_title() );
+					//printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'blogi' ), get_the_title() );
+						printf( _x('评论墙'), get_the_title() );
 				} else {
 					 printf(
-					 	/* translators: 1: number of comments, 2: post title */
-					 	_nx(
+					 	/* translators: 1: number of comments, 2: post title 
+						_nx(
 					 		'%1$s Reply to &ldquo;%2$s&rdquo;',
 					 		'%1$s Replies to &ldquo;%2$s&rdquo;',
 					 		$comments_number,
 					 		'comments title',
 					 		'blogi'
 					 	),
+						*/
+					 	_x(
+							'评论墙'
+						),
 					 	number_format_i18n( $comments_number ),
 					 	get_the_title()
 					 );
