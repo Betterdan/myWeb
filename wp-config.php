@@ -1,4 +1,7 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
 /**
  * WordPress基础配置文件。
  *
@@ -77,7 +80,6 @@ $table_prefix  = 'web_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
-
 /**
  * zh_CN本地化设置：启用ICP备案号显示
  *
